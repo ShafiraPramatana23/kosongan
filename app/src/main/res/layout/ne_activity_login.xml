@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.login.LoginActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="@color/white"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:elevation="0dp">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_scrollFlags="enterAlways"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:theme="@style/ToolBarStyle"
+                app:titleTextAppearance="@style/ToolBarStyleText">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_15sdp">
+
+                    <ImageView
+                        android:id="@+id/ivBack"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/ic_back_white" />
+
+                    <com.fidilaundry.app.util.FontTextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:includeFontPadding="false"
+                        android:text="@string/login_title"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        app:fontName="@string/font_name_dmsans"
+                        app:textStyle="@integer/font_style_bold" />
+
+                </RelativeLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                android:background="@color/colorBlue"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"/>
+
+            <LinearLayout
+                android:paddingHorizontal="@dimen/_25sdp"
+                android:paddingTop="@dimen/_25sdp"
+                android:paddingBottom="@dimen/_15sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/bg_rounded_bottom_sheet"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_2sdp"
+                                        android:orientation="vertical">
+
+                                        <com.fidilaundry.app.util.FontTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/hai_welcome"
+                                            android:textColor="@color/colorBlackTitle"
+                                            android:textSize="16sp"
+                                            app:fontName="@string/font_name_dmsans"
+                                            app:textStyle="@integer/font_style_semibold" />
+
+                                        <com.fidilaundry.app.util.FontTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/_5sdp"
+                                            android:text="@string/login_desc"
+                                            android:textColor="@color/colorGrey"
+                                            android:textSize="12sp"
+                                            app:fontName="@string/font_name_dmsans" />
+
+                                    </LinearLayout>
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        style="@style/TextInputLayoutStyle"
+                                        android:theme="@style/TextInputLayoutStyle"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:paddingTop="0dp"
+                                        android:layout_marginTop="@dimen/_10sdp"
+                                        app:hintTextAppearance="@style/TextInputLayoutHintText">
+
+                                        <com.fidilaundry.app.util.FontEditText
+                                            android:id="@+id/etUsernameEmail"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:background="@null"
+                                            android:gravity="center_vertical"
+                                            android:hint="@string/user_email_phone"
+                                            android:inputType="text|textNoSuggestions"
+                                            android:maxLines="1"
+                                            android:textCursorDrawable="@drawable/cursor_color_primary_dark"
+                                            android:textSize="12sp"
+                                            app:fontName="@string/font_name_dmsans" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_10sdp"
+                                        android:gravity="center_vertical"
+                                        android:layout_gravity="center_vertical">
+
+                                        <com.google.android.material.textfield.TextInputLayout
+                                            style="@style/TextInputLayoutStyle"
+                                            android:theme="@style/TextInputLayoutStyle"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:paddingTop="0dp"
+                                            app:hintTextAppearance="@style/TextInputLayoutHintText">
+
+                                            <com.fidilaundry.app.util.FontEditText
+                                                android:id="@+id/etPassword"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:background="@null"
+                                                android:gravity="center_vertical"
+                                                android:hint="@string/password"
+                                                android:inputType="textPassword"
+                                                android:maxLines="1"
+                                                android:textCursorDrawable="@drawable/cursor_color_primary_dark"
+                                                android:textSize="12sp"
+                                                app:fontName="@string/font_name_dmsans" />
+
+                                        </com.google.android.material.textfield.TextInputLayout>
+
+                                        <RelativeLayout
+                                            android:layout_centerVertical="true"
+                                            android:id="@+id/ivHidePass"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentEnd="true"
+                                            android:visibility="gone">
+
+                                            <ImageView
+                                                android:layout_marginTop="@dimen/_5sdp"
+                                                android:layout_width="@dimen/_18sdp"
+                                                android:layout_height="@dimen/_18sdp"
+                                                android:layout_marginHorizontal="@dimen/_8sdp"
+                                                android:backgroundTint="@color/colorGrey" />
+
+                                        </RelativeLayout>
+
+                                        <RelativeLayout
+                                            android:layout_centerVertical="true"
+                                            android:id="@+id/ivShowPass"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentRight="true">
+
+                                            <ImageView
+                                                android:layout_marginTop="@dimen/_5sdp"
+                                                android:layout_width="@dimen/_18sdp"
+                                                android:layout_height="@dimen/_18sdp"
+                                                android:layout_marginHorizontal="@dimen/_8sdp"
+                                                android:background="@drawable/ic_eye"
+                                                android:backgroundTint="@color/colorGrey" />
+
+                                        </RelativeLayout>
+
+                                    </RelativeLayout>
+
+                                    <com.fidilaundry.app.util.FontButton
+                                        android:id="@+id/btnApply"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_40sdp"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="@dimen/_20sdp"
+                                        android:background="@drawable/rounded_button"
+                                        android:clipChildren="false"
+                                        android:text="@string/login"
+                                        android:textAllCaps="false"
+                                        android:textColor="@color/white"
+                                        android:textSize="14sp"
+                                        app:fontName="@string/font_name_dmsans"
+                                        app:textStyle="@integer/font_style_semibold" />
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                            <com.fidilaundry.app.util.FontTextView
+                                android:id="@+id/btnForgotPassword"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:paddingTop="@dimen/_20sdp"
+                                android:paddingBottom="@dimen/_20sdp"
+                                android:text="@string/forgot_pass_"
+                                android:textColor="@color/colorBlue"
+                                android:textSize="12sp"
+                                app:fontName="@string/font_name_dmsans" />
+                        </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:paddingTop="@dimen/_15sdp"
+                        android:id="@+id/layDaftar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.fidilaundry.app.util.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/dont_have_account"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorGrey"
+                            android:textSize="12sp"
+                            app:fontName="@string/font_name_dmsans"
+                            app:textStyle="@integer/font_style_semibold" />
+
+                        <com.fidilaundry.app.util.FontTextView
+                            android:paddingVertical="@dimen/_10sdp"
+                            android:paddingHorizontal="@dimen/_5sdp"
+                            android:id="@+id/btnDaftar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/signup"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="12sp"
+                            app:fontName="@string/font_name_dmsans"
+                            app:textStyle="@integer/font_style_bold" />
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</layout>

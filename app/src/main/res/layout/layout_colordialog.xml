@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/loading"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/_8sdp">
+
+    <LinearLayout
+        android:id="@+id/llBkg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_top"
+        android:orientation="vertical">
+
+        <com.fidilaundry.app.util.FontTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_36sdp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:padding="@dimen/_4sdp"
+            app:fontName="@string/font_name_dmsans"
+            app:textStyle="@integer/font_style_semibold"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_14sdp" />
+
+        <LinearLayout
+            android:id="@+id/llContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/_50sdp"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:minWidth="@dimen/_200sdp">
+
+                <ImageView
+                    android:id="@+id/ivContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:scaleType="fitCenter"
+                    android:visibility="gone"/>
+
+                <com.fidilaundry.app.util.FontTextView
+                    android:id="@+id/tvContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:paddingBottom="@dimen/_8sdp"
+                    android:paddingLeft="@dimen/_8sdp"
+                    android:paddingRight="@dimen/_8sdp"
+                    android:paddingTop="@dimen/_4sdp"
+                    app:fontName="@string/font_name_dmsans"
+                    app:textStyle="@integer/font_style_reguler"
+                    android:textColor="@android:color/white"
+                    android:visibility="visible" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llBtnGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.fidilaundry.app.util.FontTextView
+            android:id="@+id/btnPositive"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/sel_def_gray_left"
+            android:clickable="true"
+            android:gravity="center"
+            android:minHeight="@dimen/_36sdp"
+            app:fontName="@string/font_name_dmsans"
+            app:textStyle="@integer/font_style_reguler"
+            android:textColor="#676767" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="@dimen/_1sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:layout_gravity="center_vertical"
+                android:background="#929292" />
+        </LinearLayout>
+
+        <com.fidilaundry.app.util.FontTextView
+            android:id="@+id/btnNegative"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/sel_def_gray_right"
+            android:clickable="true"
+            android:gravity="center"
+            app:fontName="@string/font_name_dmsans"
+            app:textStyle="@integer/font_style_semibold"
+            android:minHeight="40dp"
+            android:textColor="#676767" />
+
+    </LinearLayout>
+
+</LinearLayout>
